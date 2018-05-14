@@ -62,13 +62,42 @@ public class MostWater {
             int rightWater = (rightNext - leftEnd) * height[height[rightNext] > height[leftEnd] ? leftEnd : rightNext];
 
             if(leftWater > rightWater){
-                result = leftWater;
-                leftEnd = leftNext;
-                middleWater = leftWater;
-            }else{
-                result = rightWater;
-                rightStart = rightNext;
-                middleWater = rightWater;
+                if(leftWater > result) {
+                    result = leftWater;
+                }
+
+                if(leftEnd > 0) {
+                    leftEnd = leftNext;
+                    middleWater = leftWater;
+                }else{
+                    rightStart = rightNext;
+                    middleWater = rightWater;
+                }
+
+            }else if(leftWater < rightWater){
+                if(rightWater > result) {
+                    result = rightWater;
+                }
+
+                if(rightStart < height.length - 1) {
+                    rightStart = rightNext;
+                    middleWater = rightWater;
+                }else{
+                    leftEnd = leftNext;
+                    middleWater = leftWater;
+                }
+            }else if(leftWater == rightWater){
+                if(leftWater > result){
+                    result = leftWater;
+                }
+
+                if(leftEnd > 0){
+                    leftEnd = leftNext;
+                    middleWater = leftWater;
+                }else if(rightStart < height.length - 1){
+                    rightStart = rightNext;
+                    middleWater = rightWater;
+                }
             }
         }
 
