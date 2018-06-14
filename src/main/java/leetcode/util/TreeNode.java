@@ -29,5 +29,7 @@ public class TreeNode<T>{
         this.value = value;
     }
 
-
+    public TreeNode(T value) {
+        this.value = value;
+    }
 }
