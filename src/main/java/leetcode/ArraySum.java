@@ -10,7 +10,7 @@ import leetcode.util.Println;
 public class ArraySum {
 
 
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public ListNode addTwoNumbers(ListNode<Integer> l1, ListNode<Integer> l2) {
 
         ListNode result = new ListNode(-1);
 
@@ -65,7 +65,7 @@ public class ArraySum {
         return realResult.next;
     }
 
-    public ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
+    public ListNode addTwoNumbers2(ListNode<Integer> l1, ListNode<Integer> l2) {
 
         ListNode result = new ListNode(0);
 
@@ -114,9 +114,9 @@ public class ArraySum {
 //        ListNode node8 = new ListNode(9);
 //        node7.next = node8;
 
-        ListNode list1 = new ListNode(0);
+        ListNode<Integer> list1 = new ListNode(0);
 
-        ListNode list2 = new ListNode(0);
+        ListNode<Integer> list2 = new ListNode(0);
 
         Println.printlnList(arraySum.addTwoNumbers2(list1 , list2));
     }
