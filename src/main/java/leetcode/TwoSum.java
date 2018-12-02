@@ -128,11 +128,26 @@ public class TwoSum {
         throw new IllegalArgumentException("error input");
     }
 
+    public static int[] test = new int[10];
+
+    public static void getAllByte(int n){
+        if(n < 0){
+            Println.printArray(test);
+        }else{
+            test[n] = 0;
+            getAllByte(n - 1);
+            test[n] = 1;
+            getAllByte(n - 1);
+        }
+    }
+
     public static void main(String[] args){
-        TwoSum twoSum = new TwoSum();
+//        TwoSum twoSum = new TwoSum();
+//
+//        int[] test = {3,2,4,4,3,5,7};
+//
+//        Println.printlnArray(twoSum.twoSum4(test , 10));
 
-        int[] test = {3,2,4,4,3,5,7};
-
-        Println.printlnArray(twoSum.twoSum4(test , 10));
+        getAllByte(test.length - 1);
     }
 }
