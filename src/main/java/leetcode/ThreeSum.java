@@ -19,13 +19,13 @@ public class ThreeSum {
             HashSet<Integer> set = new HashSet<>();
             for(int j = i + 1; j < nums.length ; j++){
                 //这里必须 nums[j-2] = nums[j-1] = nums[j]才跳过本次循环，不然会排除掉{0,0,0}的情况
-                //其实也可以单独将{0,0,0}情况独立判断，这里只是简单的去掉连续3个数重复的情况，hashSet才能最终保障结果集不重复
+                //其实也可以单独将{0,0,0}情况独立判断，这里只是简单的去掉连续3个数或以上重复的情况，hashSet才能最终保障结果集不重复
                 if(j > i + 2 && nums[j] == nums[j - 1] && nums[j - 2] == nums[j - 1]){
                     continue;
                 }
                 //求出第三个数的值
                 int k = -(nums[i] + nums[j]);
-                //这里要移除掉第三个数的值，防止后面的重复扫描
+                //这里要移除掉第三个数的值，防止后面的重复扫描,这里能排除2个数重复的情况
                 if(set.remove(k)){
                     result.add(Arrays.asList(nums[i] , nums[j] , k));
                     //

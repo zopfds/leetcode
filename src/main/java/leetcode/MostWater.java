@@ -44,7 +44,7 @@ public class MostWater {
         int leftNext = leftEnd , rightNext = rightStart;
         int middleWater = (rightStart - leftEnd) * height[height[rightStart] > height[leftEnd] ? leftEnd : rightStart];
 
-        while(leftEnd != 0 || rightStart != height.length - 1 || (height[leftEnd] > 0 && height[rightStart] > 0)) {
+        while((leftEnd != 0 || rightStart != height.length - 1) && (height[leftEnd] > 0 && height[rightStart] > 0)) {
 
             if(middleWater > result){
                 result = middleWater;
@@ -68,6 +68,7 @@ public class MostWater {
 
                 if(leftEnd > 0) {
                     leftEnd = leftNext;
+
                     middleWater = leftWater;
                 }else{
                     rightStart = rightNext;
