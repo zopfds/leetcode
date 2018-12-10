@@ -33,6 +33,21 @@ public class Println {
         }
     }
 
+    public static void printArray(char[] arrgs){
+        if(arrgs == null){
+            return;
+        }
+
+        for(int i = 0 ; i < arrgs.length ; i ++ ){
+            System.out.print(arrgs[i]);
+            if(i != arrgs.length - 1){
+                System.out.print(",");
+            }else{
+                System.out.println("\n");
+            }
+        }
+    }
+
     public static void printArrayList(List<Integer> list){
         if(list == null || list.size() == 0){
             return;
