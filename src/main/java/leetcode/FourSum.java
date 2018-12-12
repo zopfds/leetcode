@@ -1,6 +1,5 @@
 package leetcode;
 
-import java.util.List;
 
 /**
  * 四数求和
@@ -10,12 +9,4 @@ import java.util.List;
  * @create 2018/12/3
  */
 public class FourSum {
-
-    public List<List<Integer>> fourSum(int[] nums, int target) {
-        return null;
-    }
-
-    public static void main(String[] args){
-
-    }
 }
