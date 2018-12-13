@@ -1,5 +1,10 @@
 package leetcode;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
 public class SkyLine {
     public int maxIncreaseKeepingSkyline(int[][] grid) {
         int[] parallel = new int[grid[0].length];
@@ -37,9 +42,13 @@ public class SkyLine {
     }
 
     public static void main(String[] args){
-        SkyLine skyLine = new SkyLine();
-        int[][] grid = new int[][]{{59,88,44},{3,18,38},{21,26,51}};
-        skyLine.maxIncreaseKeepingSkyline(grid);
+//        SkyLine skyLine = new SkyLine();
+//        int[][] grid = new int[][]{{59,88,44},{3,18,38},{21,26,51}};
+//        skyLine.maxIncreaseKeepingSkyline(grid);
+
+//        Integer[] test = ;
+//        List<Integer> testList = Arrays.asList(test);
+//        testList.sort(Comparator.naturalOrder());
     }
 
 
