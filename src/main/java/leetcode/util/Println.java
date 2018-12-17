@@ -63,6 +63,21 @@ public class Println {
         }
     }
 
+    public static void printStringList(List<String> list){
+        if(list == null || list.size() == 0){
+            return;
+        }
+
+        for(int i = 0 ; i < list.size() ; i ++ ){
+            System.out.print(list.get(i));
+            if(i != list.size() - 1){
+                System.out.print(",");
+            }else{
+                System.out.println("");
+            }
+        }
+    }
+
 
 
     public static void printlnList(ListNode node){
