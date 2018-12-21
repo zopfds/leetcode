@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.ArrayList;
+
 /**
  * 字符串相乘
  *
@@ -10,5 +12,12 @@ package leetcode;
 public class MultiplyStrings {
     public String multiply(String num1, String num2) {
         return null;
+    }
+
+    public static void main(String[] args){
+        char test = 58;
+        System.out.println(test);
+        int[] test1 = {0,1};
+//        new ArrayList<Integer>(new ArrayList<Integer>(test1));
     }
 }
