@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.*;
+
 /**
  * 跳跃游戏
  *
