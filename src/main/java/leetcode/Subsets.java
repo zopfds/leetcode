@@ -1,5 +1,7 @@
 package leetcode;
 
+import com.alibaba.fastjson.JSON;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,5 +32,11 @@ public class Subsets {
             subset(result , i + 1 , k - 1 , list , nums);
             list.remove(Integer.valueOf(nums[i]));
         }
+    }
+
+    public static void main(String[] args){
+        List<String> testList = new ArrayList<>();
+        testList.add("8OPs8Cqmg_rlSzZ7pIueY64oncYQI3OBAL9o1IiG0jQ");
+        System.out.println(JSON.toJSONString(testList));
     }
 }
