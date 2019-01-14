@@ -9,6 +9,7 @@ package leetcode;
  */
 public class LargestRectangleinHistogram {
     public int largestRectangleArea(int[] heights) {
+
         return 0;
     }
 
