@@ -1,8 +1,6 @@
 package leetcode;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * ${DESCRIPTION}
@@ -68,6 +66,5 @@ public class BinaryTreeZigzagLevelOrderTraversal {
         root2.right = root4;
 
         System.out.println(new BinaryTreeZigzagLevelOrderTraversal().zigzagLevelOrder(root));
-
     }
 }
